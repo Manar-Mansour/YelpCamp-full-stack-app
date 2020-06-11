@@ -41,7 +41,7 @@ var commentRoutes=require("./routes/comments"),
 	indexRoutes=require("./routes/index");
 
 //mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false});
-mongoose.connect('mongodb+srv://Manar:mypass@cluster0-czheo.mongodb.net/yelp_campcd ?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false, useCreateIndex:true});
+mongoose.connect('mongodb+srv://Manar:mypass@cluster0-czheo.mongodb.net/yelp_camp?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false, useCreateIndex:true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
