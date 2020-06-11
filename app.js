@@ -39,9 +39,9 @@ app.use(function(req,res,next){
 var commentRoutes=require("./routes/comments"),
 	campgroundRoutes=require("./routes/campgrounds"),
 	indexRoutes=require("./routes/index");
-
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false});
 //mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false});
-mongoose.connect('mongodb+srv://Manar:mypass@cluster0-czheo.mongodb.net/yelp_camp?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false, useCreateIndex:true});
+//mongoose.connect('mongodb+srv://Manar:mypass@cluster0-czheo.mongodb.net/yelp_camp?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology:true, useFindAndModify:false, useCreateIndex:true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
